@@ -23,7 +23,7 @@ Signed-off-by: wevsty <ty@wevs.org>
 +		clock-names = "clk_crypto", "hclk_crypto";
 +		assigned-clocks = <&cru SCLK_CRYPTO>, <&cru HCLK_CRYPTO_SLV>;
 +		assigned-clock-rates = <150000000>, <100000000>;
-+		status = "disabled";
++		status = "okay";
 +	};
 +
  	grf: syscon@ff100000 {
