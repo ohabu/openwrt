@@ -19,23 +19,23 @@ if [ $ISENABLE -eq 1 ]; then
 fi
 
 #20Hz
-echo -n 50000 > /sys/class/pwm/pwmchip0/pwm0/period
+echo -n 1000000 > /sys/class/pwm/pwmchip0/pwm0/period
 echo -n 1 > /sys/class/pwm/pwmchip0/pwm0/enable
 
 # max speed run 5s
-echo -n 46990 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
+echo -n 909900 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
 sleep 5
-echo -n 25000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
+echo -n 500000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
 
 # declare -a CpuTemps=(55000 43000 38000 32000)
 # declare -a PwmDutyCycles=(1000 20000 30000 45000)
 
 declare -a CpuTemps=(75000 63000 58000 55000)
 declare -a CpuTempsLow=(70000 58000 53000 50000)
-declare -a PwmDutyCycles=(10000 25000 35000 46990)
+declare -a PwmDutyCycles=(100000 500000 700000 909900)
 
 declare -a Percents=(100 75 50 25)
-DefaultDuty=49990
+DefaultDuty=999999
 DefaultPercents=0
 
 while true
